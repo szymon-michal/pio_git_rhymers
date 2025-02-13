@@ -2,17 +2,17 @@ package edu.kis.vh.nursery;
 
 public class FIFORhymer extends defaultCountingOutRhymer {
 
-    public defaultCountingOutRhymer temp = new defaultCountingOutRhymer();
+    public defaultCountingOutRhymer Temp = new defaultCountingOutRhymer();
     
     @Override
     public int countOut() {
         while (!callCheck())
-        temp.countIn(super.countOut());
+        Temp.CountIn(super.countOut());
         
-        int ret = temp.countOut();
+        int ret = Temp.countOut();
         
-        while (!temp.callCheck())
-        countIn(temp.countOut());
+        while (!Temp.callCheck())
+        CountIn(Temp.countOut());
         
         return ret;
     }
